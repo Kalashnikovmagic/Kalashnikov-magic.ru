@@ -293,12 +293,8 @@ function updateFacts(){
     // The user must physically scroll after opening the fourth card.
     if(factsUnlockedAtScroll===null) factsUnlockedAtScroll=window.scrollY;
 
-    const scrollAfterUnlock=Math.max(0,window.scrollY-factsUnlockedAtScroll);
-    const revealStart=80;
-    const surpriseStart=160;
-
-    factsSection.classList.toggle('is-revealing',scrollAfterUnlock>=revealStart);
-    factsSection.classList.toggle('is-surprise',scrollAfterUnlock>=surpriseStart);
+    // Keep all four opened fact cards visible while scrolling toward the next scene.
+    factsSection.classList.remove('is-revealing','is-surprise');
 
     if(factsHint){
       factsHint.textContent='ПРОДОЛЖАЙТЕ СКРОЛЛИТЬ';
