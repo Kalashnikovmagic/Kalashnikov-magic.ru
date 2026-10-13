@@ -1819,3 +1819,19 @@ body.format-modal-open{overflow:hidden}
     max-width:calc(100vw - 24px);
   }
 }
+
+
+/* Hero CTA: place it at the extreme right edge, with only a small safe margin. */
+.hero .scene-booking-cta--hero{
+  left:auto !important;
+  right:0 !important;
+  margin-right:0 !important;
+  transform:translateX(0) !important;
+  max-width:calc(100vw - 12px);
+}
+@media(max-width:820px){
+  .hero .scene-booking-cta--hero{
+    right:0 !important;
+    max-width:calc(100vw - 8px);
+  }
+}
