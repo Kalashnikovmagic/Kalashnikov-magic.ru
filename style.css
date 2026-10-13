@@ -1787,3 +1787,20 @@ body.format-modal-open{overflow:hidden}
     background:rgba(20,22,13,.96);
   }
 }
+
+
+/* Visual review: disable global grain and vignette overlays */
+.grain,
+.vignette{
+  display:none !important;
+}
+
+/* Keep the hero Liquid Glass booking CTA closer to the right edge. */
+.scene-booking-cta--hero{
+  right:2vw;
+}
+@media(max-width:820px){
+  .scene-booking-cta--hero{
+    right:3vw;
+  }
+}
